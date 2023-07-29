@@ -3,34 +3,46 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
+   let primerElemento = 0;
+   return primerElemento = array[0];
 }
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+   let ultimoElemento = 0;
+   return ultimoElemento = array.pop();
 }
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
+   return array.length;
 }
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+   var masUno = array.map((num => { return num + 1;}));
+   return masUno;
 }
+     
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.push(elemento);
+   return array;
 }
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
+   array.unshift(elemento);
+   return array;
 }
 
 function dePalabrasAFrase(palabras) {
@@ -39,37 +51,64 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+  let frase = palabras.join(' ');
+  return frase;
+       
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   incluyebool = array.includes(elemento);
+   return incluyebool;
+
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+      for (var i=0,acumula_suma=0; i < arrayOfNums.length ; i++ ) {
+      acumula_suma += arrayOfNums[i];
+   } 
+   return acumula_suma;
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   let total = 0;
+    for (let i=0 ; i < resultadosTest.length ; i++ ) {
+      total += resultadosTest[i];
+      } 
+      let promedio = total / resultadosTest.length; 
+      return promedio;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-}
+   bigBrother = arrayOfNums[0];
+   for (let i=1; i < arrayOfNums.length; i++) {
+      if (arrayOfNums[i] > bigBrother) {
+         bigBrother = arrayOfNums[i];
+      }
+   } return bigBrother;
+      
+   }
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   let arguments = [2 , 3 , 4 , 5 , 6 , 7];
+   for (let i=0, multiplicados=0; i <= arguments.length; i++ ) {
+         multiplicados = arguments[i] * arguments[i + 1];  
+   }
 }
 
 function cuentoElementos(array) {
